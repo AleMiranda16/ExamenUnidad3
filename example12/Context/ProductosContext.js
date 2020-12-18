@@ -22,7 +22,7 @@ const ProductosProvider = (props)=>{
     const agregar =(producto,precio)=>{
         alert("Añadiste un producto")
         setCarro([...carro,producto])
-        setTotal(total+precio)
+        setTotal(Number(total)+Number(precio))
         console.log(carro)
     }
 
@@ -31,7 +31,7 @@ const ProductosProvider = (props)=>{
         const temporal = carro.filter((a,i)=>i!==index)
 
         setCarro(temporal)
-        setTotal(total-precio)
+        setTotal(Number(total)-Number(precio))
     }
 
     
