@@ -34,7 +34,7 @@ const CartScreen = () => {
 
 
         }
-        <Text style={{marginTop:50, textAlign:'center', fontSize:20}}>Total: ${total}</Text>
+        <Text style={{marginTop:50, textAlign:'center', fontSize:20}}>Total: ${(total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</Text>
 
         <Button
             buttonStyle={styles.buttons}
